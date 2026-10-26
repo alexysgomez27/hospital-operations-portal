@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexCare Health System | Clinical Operations</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col font-sans">
+  <header class="bg-slate-800 border-b border-slate-700 px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-hospital"></i></div>
+      <div>
+        <h1 class="text-sm font-bold text-white">ApexCare Medical Center</h1>
+        <p class="text-[11px] text-slate-400">Clinical Bed Allocation & Inpatient Database</p>
+      </div>
+    </div>
+    <span class="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">PostgreSQL Active</span>
+  </header>
+
+  <div class="flex-1 max-w-6xl w-full mx-auto p-6 space-y-6">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-4">
+        <p class="text-xs text-slate-400">Active Patients</p>
+        <p class="text-2xl font-bold text-teal-400 mt-1">1,428</p>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-4">
+        <p class="text-xs text-slate-400">Bed Occupancy</p>
+        <p class="text-2xl font-bold text-cyan-400 mt-1">82.4%</p>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-4">
+        <p class="text-xs text-slate-400">ICU Load</p>
+        <p class="text-2xl font-bold text-amber-400 mt-1">91.6%</p>
+      </div>
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-4">
+        <p class="text-xs text-slate-400">Avg Inpatient Stay</p>
+        <p class="text-2xl font-bold text-indigo-400 mt-1">4.3 Days</p>
+      </div>
+    </div>
+
+    <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden">
+      <div class="px-5 py-3 border-b border-slate-700 bg-slate-800/90 font-semibold text-xs text-white">Active Bed Allocation</div>
+      <table class="w-full text-left text-xs">
+        <thead class="bg-slate-900/60 text-slate-400 uppercase border-b border-slate-700/80">
+          <tr>
+            <th class="px-5 py-3">Ward</th>
+            <th class="px-5 py-3">Attending Physician</th>
+            <th class="px-5 py-3">Beds</th>
+            <th class="px-5 py-3">Occupied</th>
+            <th class="px-5 py-3">Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-700 text-slate-200">
+          <tr><td class="px-5 py-3 font-medium text-white">Emergency Medicine</td><td class="px-5 py-3">Dr. Marcus Vance</td><td class="px-5 py-3">45</td><td class="px-5 py-3">41</td><td class="px-5 py-3 text-rose-400">Near Surge</td></tr>
+          <tr><td class="px-5 py-3 font-medium text-white">Cardiology & CCU</td><td class="px-5 py-3">Dr. Sophia Lin</td><td class="px-5 py-3">35</td><td class="px-5 py-3">28</td><td class="px-5 py-3 text-teal-400">Optimal</td></tr>
+          <tr><td class="px-5 py-3 font-medium text-white">Intensive Care Unit (ICU)</td><td class="px-5 py-3">Dr. Tariq Al-Mansoor</td><td class="px-5 py-3">24</td><td class="px-5 py-3">22</td><td class="px-5 py-3 text-amber-400">High Load</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
